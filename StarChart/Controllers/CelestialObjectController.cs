@@ -34,7 +34,7 @@ namespace StarChart.Controllers
             {
                 item.Satellites = celestialObjects.Where(e => e.OrbitedObjectId == item.Id).ToList();
             }
-            return Ok();
+            return Ok(celestialObjects);
         }
         [HttpGet]
         public IActionResult GetAll()
